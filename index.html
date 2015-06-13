@@ -1,1 +1,86 @@
-<h1>Hi!</h1>
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Playlist</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css">
+        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+        rel="stylesheet" type="text/css">
+        <style type="text/css">
+            .bottomaligned {position:absolute; bottom:0;  margin-bottom:20px; left: 0; right:0; }
+                              .btn-mg.round {
+                        	border-radius: 24px;
+                        }
+            .formdiv-right {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    height: 50px;
+    right: 0px;
+    width: 200px;
+    border: 1px solid #f00;            }
+
+            .formdiv-left {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    height: 50px;
+    left: 0px;
+    width: 200px;
+border: 1px solid #f00;
+            }
+
+            .btn-playlist {
+   background: #FF2F92;
+    color: #ffffff;
+            }
+
+            .debug {
+border: 1px solid #f00;
+
+
+            }
+
+.center_div{
+    margin: 0 auto;
+    width:80%
+}
+        </style>
+    </head>
+    
+    <body>
+        <div class="cover">
+            <div class="cover-image" style="background-image : url('pl.jpg')"></div>
+            <div class="bottomaligned" style="background: rgba(0, 0, 0, .7);">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="text-inverse">Want to Play?</h2>
+                        <p class="text-inverse">Enter your email and we'll put you on our VIP invite list.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form accept-charset="UTF-8" action="https://formkeep.com/f/b46c1b3fa7bd"
+                            method="POST" name="signup" class="center-block" style="width: 320px;" role="form">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <input class="form-control" type="email" name="email" placeholder="Your Email">
+                                </div>
+                                <div class="form-group text-center">
+                                        <a class="btn btn-playlist btn-mg round" onClick="signup.submit()">submit</a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
