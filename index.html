@@ -1,88 +1,111 @@
 <!DOCTYPE html>
-<html>
-    
-    <head>
-        <title>Playlist</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
-        rel="stylesheet" type="text/css">
-        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
-        rel="stylesheet" type="text/css">
-        <style type="text/css">
-            .bottomaligned {position:absolute; bottom:0;  margin-bottom:20px; left: 0; right:0; }
-                              .btn-mg.round {
-                        	border-radius: 24px;
-                        }
-            .formdiv-right {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: right;
-    height: 50px;
-    right: 0px;
-    width: 200px;
-    border: 1px solid #f00;            }
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Playlist.com</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-            .formdiv-left {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: left;
-    height: 50px;
-    left: 0px;
-    width: 200px;
-border: 1px solid #f00;
-            }
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            .btn-playlist {
-   background: #FF2F92;
-    color: #ffffff;
-            }
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
-            .debug {
-border: 1px solid #f00;
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/playlist.css">
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
+  <link rel="stylesheet" href="bower_components/owlcar/owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" href="bower_components/owlcar/owl-carousel/owl.theme.css">
 
-            }
+  <!--<link rel="icon" type="image/png" href="images/favicon.png" />-->
 
-.center_div{
-    margin: 0 auto;
-    width:80%
-}
-        </style>
-    </head>
-    
-    <body>
-        <div class="cover">
-            <div class="cover-image" style="background-image : url('pl.jpg')"></div>
-            <div class="bottomaligned" style="background: rgba(0, 0, 0, .7);">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <h2 class="text-inverse">Wanna Play?</h2>
-                            <p class="text-inverse">Enter your email and we'll put you on our VIP invite list.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <form accept-charset="UTF-8" action="https://formkeep.com/f/b46c1b3fa7bd"
-                                method="POST" name="signup" class="center-block" style="width: 320px;" role="form">
-                                <div class="form-horizontal">
-                                    <div class="form-group">
-                                        <input class="form-control" type="email" name="email" placeholder="Your Email">
-                                    </div>
-                                    <div class="form-group text-center">
-                                            <a class="btn btn-playlist btn-mg round" onClick="signup.submit()">submit</a>
-                                    </div>
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+</head>
+<body id="home">
+  <!-- Hero -->
+  <div class="u-full-width bg-image">
+    <!-- Navbar-->
+    <div class="navbar">
+      <div class="container">
+        <div class="logo-container">
+          <a href="/">
+            <img src="images/playlist-logo.png" alt="playlist logo" class="logo"/>
+          </a>
         </div>
-    </body>
+          <div class="nav-menu">
+          <ul>
+            <li>
+              <a href="about.html">ABOUT</a>
+            </li>
+            <li>
+              <a href="team.html">TEAM</a>
+            </li>
+            <li>
+              <a href="mailto:contact@playlist.com">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Callout/Form-->
+    <div class="container hero">
+      <div class="row">
 
+        <div class="three columns">&nbsp;</div>
+
+        <div class="six columns callout">
+          <h4>Wanna Play?</h4>
+          <p>Enter your email and we'll put you on our VIP invite list.</p>
+
+          <form accept-charset="UTF-8" action="https://formkeep.com/f/b46c1b3fa7bd"
+                                method="POST" name="signup" class="center-block">
+            <div class="row">
+              <div class="nine columns signup-input">
+                <input class="u-full-width" type="email" placeholder="Your Email" id="exampleEmailInput">
+              </div>
+              <div class="three columns btn-container">
+                <input class="button-primary btn-submit" type="submit" value="Submit">
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="three columns">&nbsp;</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer-->
+  <footer class="u-full-width">
+    <div class="container">
+      <div class="copyright u-pull-left">
+        &copy; 2015 PLAYLIST.COM
+      </div>
+      <div class="social u-pull-right">
+        <a href="http://www.facebook.com/playlist"><img src="images/icon-facebook.svg"/></a>
+        <a href="http://twitter.com/playlist"><img src="images/icon-twitter.svg"/></a>
+      </div>
+    </div>
+  </footer>
+
+<!-- End Document -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="bower_components/owlcar/owl-carousel/owl.carousel.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        pagination: false,
+        navigation: true,
+        center: true,
+        activeClass: "active",
+        animateIn: true,
+        animateOut: true,
+        autoHeight: false,
+        autoWidth: false,
+        navigationText: ["&larr;","&rarr;"]
+      });
+    });
+  </script>
+</body>
 </html>

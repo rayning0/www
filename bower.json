@@ -1,0 +1,19 @@
+{
+  "name": "Playlist.com website",
+  "version": "0.0.1",
+  "homepage": "playlist.com",
+  "authors": [
+    "Geoff Miller"
+  ],
+  "description": "The Playlist.com Website",
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "owlcar": "~1.3.2"
+  }
+}

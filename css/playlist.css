@@ -1,0 +1,1033 @@
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+* Less Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column,
+  .columns {
+    margin-left: 4%;
+  }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0;
+  }
+  .one.column,
+  .one.columns {
+    width: 4.66666667%;
+  }
+  .two.columns {
+    width: 13.33333333%;
+  }
+  .three.columns {
+    width: 22%;
+  }
+  .four.columns {
+    width: 30.66666667%;
+  }
+  .five.columns {
+    width: 39.33333333%;
+  }
+  .six.columns {
+    width: 48%;
+  }
+  .seven.columns {
+    width: 56.66666667%;
+  }
+  .eight.columns {
+    width: 65.33333333%;
+  }
+  .nine.columns {
+    width: 74%;
+  }
+  .ten.columns {
+    width: 82.66666667%;
+  }
+  .eleven.columns {
+    width: 91.33333333%;
+  }
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
+  .one-third.column {
+    width: 30.66666667%;
+  }
+  .two-thirds.column {
+    width: 65.33333333%;
+  }
+  .one-half.column {
+    width: 48%;
+  }
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns {
+    margin-left: 8.66666667%;
+  }
+  .offset-by-two.column,
+  .offset-by-two.columns {
+    margin-left: 17.33333333%;
+  }
+  .offset-by-three.column,
+  .offset-by-three.columns {
+    margin-left: 26%;
+  }
+  .offset-by-four.column,
+  .offset-by-four.columns {
+    margin-left: 34.66666667%;
+  }
+  .offset-by-five.column,
+  .offset-by-five.columns {
+    margin-left: 43.33333333%;
+  }
+  .offset-by-six.column,
+  .offset-by-six.columns {
+    margin-left: 52%;
+  }
+  .offset-by-seven.column,
+  .offset-by-seven.columns {
+    margin-left: 60.66666667%;
+  }
+  .offset-by-eight.column,
+  .offset-by-eight.columns {
+    margin-left: 69.33333333%;
+  }
+  .offset-by-nine.column,
+  .offset-by-nine.columns {
+    margin-left: 78%;
+  }
+  .offset-by-ten.column,
+  .offset-by-ten.columns {
+    margin-left: 86.66666667%;
+  }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns {
+    margin-left: 95.33333333%;
+  }
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns {
+    margin-left: 34.66666667%;
+  }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns {
+    margin-left: 69.33333333%;
+  }
+  .offset-by-one-half.column,
+  .offset-by-one-half.column {
+    margin-left: 52%;
+  }
+}
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.5em;
+  /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222222;
+}
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+h1 {
+  font-size: 4.0rem;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+}
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: -0.1rem;
+}
+h3 {
+  font-size: 3.0rem;
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+}
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -0.08rem;
+}
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+}
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+/* Larger than phablet */
+@media (min-width: 550px) {
+  h1 {
+    font-size: 5.0rem;
+  }
+  h2 {
+    font-size: 4.2rem;
+  }
+  h3 {
+    font-size: 3.6rem;
+  }
+  h4 {
+    font-size: 3.0rem;
+  }
+  h5 {
+    font-size: 2.4rem;
+  }
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+p {
+  margin-top: 0;
+}
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #1eaedb;
+}
+a:hover {
+  color: #1b9cc5;
+}
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button {
+  display: inline-block;
+  height: 42px;
+  padding: 0 30px;
+  color: #555555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 42px;
+  border: 1px solid #bbbbbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 42px;
+  padding: 0 30px;
+  color: #555555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 42px;
+  border: 1px solid #bbbbbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.button:hover,
+button:hover {
+  color: #333333;
+  border-color: #888888;
+  outline: 0;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  color: #333333;
+  border-color: #888888;
+  outline: 0;
+}
+.button:focus,
+button:focus {
+  color: #333333;
+  border-color: #888888;
+  outline: 0;
+}
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333333;
+  border-color: #888888;
+  outline: 0;
+}
+.button.button-primary,
+button.button-primary {
+  color: #fff;
+  background-color: #ff206f;
+  border-color: #ff206f;
+}
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #fff;
+  background-color: #ff206f;
+  border-color: #ff206f;
+}
+.button.button-primary:hover,
+button.button-primary:hover {
+  color: #fff;
+  background-color: #1eaedb;
+  border-color: #1eaedb;
+}
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover {
+  color: #fff;
+  background-color: #1eaedb;
+  border-color: #1eaedb;
+}
+.button.button-primary:focus,
+button.button-primary:focus {
+  color: #fff;
+  background-color: #1eaedb;
+  border-color: #1eaedb;
+}
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #fff;
+  background-color: #1eaedb;
+  border-color: #1eaedb;
+}
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"] {
+  height: 42px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 42px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 42px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus {
+  border: 1px solid #ff206f;
+  outline: 0;
+}
+textarea:focus,
+select:focus {
+  border: 1px solid #ff206f;
+  outline: 0;
+}
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+}
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal;
+}
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside;
+}
+ol {
+  list-style: decimal inside;
+  padding-left: 0;
+  margin-top: 0;
+}
+ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+ul ul,
+ul ol {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+li {
+  margin-bottom: 1rem;
+}
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #f1f1f1;
+  border: 1px solid #e1e1e1;
+  border-radius: 42px;
+}
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+}
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e1e1e1;
+}
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 1rem;
+}
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem;
+}
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.u-pull-right {
+  float: right;
+}
+.u-pull-left {
+  float: left;
+}
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #e1e1e1;
+}
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+/* Larger than mobile */
+/* Larger than phablet (also point when grid becomes active) */
+/* Larger than tablet */
+/* Larger than desktop */
+/* Larger than Desktop HD */
+.center-input-text ::-webkit-input-placeholder {
+  text-align: center;
+}
+.center-input-text :-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+.center-input-text ::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+.center-input-text :-ms-input-placeholder {
+  text-align: center;
+}
+body {
+  margin: 0px;
+  font-family: 'Varela Round', sans-serif;
+}
+body#home {
+  background: url("../images/pl.jpg") center center fixed no-repeat;
+  background-size: cover;
+}
+body#home footer {
+  position: absolute;
+  bottom: 0;
+}
+@media (min-width: 0px) and (max-width: 550px) {
+  body#home footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
+body#home .container.hero:not(.bottom) {
+  margin-bottom: 100px;
+}
+body .navbar.invert {
+  background-color: #303742;
+  background: #303742;
+}
+body .navbar {
+  background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+  color: white;
+  width: 100%;
+  height: 60px;
+}
+body .navbar .container {
+  height: inherit;
+}
+body .navbar .container .logo-container {
+  float: left;
+  width: 120px;
+  height: 60px;
+}
+body .navbar .container .logo-container a {
+  text-decoration: none;
+}
+body .navbar .container .logo-container a img.logo {
+  height: auto;
+  width: 120px;
+  margin-top: 20px;
+}
+body .navbar .container .nav-menu {
+  float: right;
+}
+body .navbar .container .nav-menu ul {
+  list-style: none;
+  height: inherit;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+body .navbar .container .nav-menu ul li {
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+body .navbar .container .nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+body .navbar .container .nav-menu ul li a:hover {
+  color: #ff206f;
+}
+body .navbar .container .nav-menu ul li.active {
+  padding: 3px 10px;
+  border-radius: 25px;
+  background-color: #ff206f;
+  border-color: #ff206f;
+}
+body .navbar .container .nav-menu ul li.active a {
+  color: white;
+}
+@media (min-width: 0px) and (max-width: 550px) {
+  body .navbar {
+    height: 140px;
+  }
+  body .navbar .container {
+    width: 100%;
+  }
+  body .navbar .container .logo-container {
+    float: none;
+    width: 120px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+  }
+  body .navbar .container .logo-container a img.logo {
+    float: none;
+    width: 120px;
+  }
+  body .navbar .container .nav-menu {
+    display: block;
+    float: none;
+    margin-left: -20px;
+  }
+  body .navbar .container .nav-menu ul {
+    text-align: center;
+    width: 320px;
+    margin: 0 auto;
+  }
+  body .navbar .container .nav-menu ul li {
+    margin-left: 0px;
+    width: 80px;
+  }
+}
+body .container.hero:not(.bottom) {
+  color: white;
+}
+body .container.hero:not(.bottom) .callout {
+  text-align: center;
+  margin-top: 25%;
+}
+body .container.hero:not(.bottom) .callout h4 {
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
+}
+body .container.hero:not(.bottom) .callout p {
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
+}
+body .container.hero:not(.bottom) .callout form .signup-input ::-webkit-input-placeholder {
+  text-align: center;
+}
+body .container.hero:not(.bottom) .callout form .signup-input :-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+body .container.hero:not(.bottom) .callout form .signup-input ::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+body .container.hero:not(.bottom) .callout form .signup-input :-ms-input-placeholder {
+  text-align: center;
+}
+body .container.hero:not(.bottom) .callout form .btn-container {
+  margin-left: 2% ;
+}
+@media (min-width: 0px) and (max-width: 550px) {
+  body .container.hero:not(.bottom) {
+    background-color: #232C34;
+    width: 100%;
+    padding: 20px;
+    height: 300px;
+    margin-top: 200px;
+  }
+  body .container.hero:not(.bottom) .callout {
+    margin-top: 0;
+  }
+  body .container.hero:not(.bottom) .callout form .signup-input ::-webkit-input-placeholder {
+    text-align: center;
+  }
+  body .container.hero:not(.bottom) .callout form .signup-input :-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
+  }
+  body .container.hero:not(.bottom) .callout form .signup-input ::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+  }
+  body .container.hero:not(.bottom) .callout form .signup-input :-ms-input-placeholder {
+    text-align: center;
+  }
+  body .container.hero:not(.bottom) .callout form .btn-container {
+    margin-left: 0% ;
+  }
+  body .container.hero:not(.bottom) .callout form .btn-container .btn-submit {
+    width: 100%;
+  }
+}
+body .container.hero.bottom .callout {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+body .container.hero.bottom .callout h4 {
+  color: black;
+  text-shadow: none;
+}
+body .container.hero.bottom .callout p {
+  color: #ff206f;
+  text-shadow: none;
+}
+@media (min-width: 0px) and (max-width: 550px) {
+  body .container.hero.bottom {
+    text-align: center;
+  }
+  body .container.hero.bottom .callout {
+    margin-top: 0;
+  }
+  body .container.hero.bottom .callout form .signup-input ::-webkit-input-placeholder {
+    text-align: center;
+  }
+  body .container.hero.bottom .callout form .signup-input :-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
+  }
+  body .container.hero.bottom .callout form .signup-input ::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+  }
+  body .container.hero.bottom .callout form .signup-input :-ms-input-placeholder {
+    text-align: center;
+  }
+  body .container.hero.bottom .callout form .btn-container {
+    margin-left: 0% ;
+  }
+  body .container.hero.bottom .callout form .btn-container .btn-submit {
+    width: 100%;
+  }
+}
+body .middle-band {
+  background-color: white;
+  text-align: center;
+}
+body .middle-band p {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+}
+body .album-carousel {
+  overflow-x: hidden;
+}
+body .album-carousel ul {
+  text-align: center;
+  list-style: none;
+  margin-bottom: 0;
+}
+body .album-carousel ul li {
+  display: inline-block;
+  margin-bottom: 0;
+  position: relative;
+}
+body .album-carousel ul li img.play-btn {
+  opacity: 0.5;
+  width: 50px;
+  height: 50px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 35px;
+  right: 0;
+}
+body .album-carousel ul li img.play-btn:hover {
+  opacity: 1.0;
+}
+@media (min-width: 0px) and (max-width: 550px) {
+  body .album-carousel ul li img.play-btn {
+    display: none;
+  }
+}
+body .album-carousel ul li span.genre {
+  color: white;
+  opacity: 0.7;
+  width: 100%;
+  height: 50px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@media (min-width: 0px) and (max-width: 550px) {
+  body .album-carousel ul li span.genre {
+    display: none;
+  }
+}
+body .album-carousel ul li .media-player {
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #232A34;
+}
+body .album-carousel ul li .media-player img.album-thumb {
+  float: left;
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+}
+body .album-carousel ul li .media-player .artist-info .album {
+  text-align: left;
+  color: white;
+  font-size: 11px;
+  margin: 18px 5px 10px 10px;
+}
+body .album-carousel ul li .media-player .artist-info .artist {
+  text-align: left;
+  color: whitesmoke;
+  opacity: 0.5;
+  font-size: 12px;
+  margin: 10px;
+}
+body .album-carousel ul li .media-player .player-controls img.pause {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  height: 15px;
+}
+body .album-carousel ul li .media-player .player-controls img.skip {
+  position: absolute;
+  top: 31px;
+  right: 15px;
+  height: 15px;
+}
+body .album-carousel ul li .media-player .progress-container {
+  position: absolute;
+  top: -3px;
+  height: 3px;
+  width: 100%;
+}
+body .album-carousel ul li .media-player .progress-container .bar {
+  position: absolute;
+  background-color: #ff206f;
+  width: 67%;
+  height: 3px;
+  top: 0;
+  left: 0;
+}
+body .album-carousel ul li .media-player .progress-container .bg {
+  position: absolute;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  opacity: 0.5;
+}
+@media (min-width: 0px) and (max-width: 550px) {
+  body .album-carousel ul li .media-player {
+    display: none;
+  }
+}
+body footer {
+  height: 80px;
+  background-color: #f5f5f5;
+}
+body footer .copyright {
+  margin-top: 35px;
+  font-size: 10px;
+}
+body footer .social {
+  margin-top: 25px;
+}
+body footer .social img {
+  margin-left: 20px;
+  height: 36px;
+  width: 36px;
+}
+body .alt-hero {
+  background-color: #F5F5F5;
+  height: 230px;
+  margin-bottom: 50px;
+}
+body .alt-hero .callout {
+  margin-top: 35px;
+  text-align: center;
+}
+body .alt-hero .callout p {
+  color: #ff206f;
+}
+body .about-us .job-listing {
+  margin-bottom: 30px;
+}
+body .about-us .job-listing .job-title {
+  color: #ff206f;
+}
+body .about-us .job-listing .social img {
+  margin-left: 20px;
+  height: 36px;
+  width: 36px;
+}
+body .team .row {
+  margin-bottom: 30px;
+}
+body .team .row img.team-pic {
+  border-radius: 72px;
+  margin-right: 10px;
+}
+body .team .row h6 {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+body .team .row h6.title {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  color: #ff206f;
+}
+body .contact-us input[type="email"] {
+  border-radius: 7px;
+}
+body .contact-us textarea {
+  font-size: 15px;
+  border-radius: 7px;
+}
+body .owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+}
+body .owl-theme .owl-controls .owl-buttons .owl-prev {
+  display: block;
+  left: 20%;
+  top: 39%;
+  font-size: 30px;
+  border-radius: 45px;
+  height: 45px;
+  background-color: #232C34;
+}
+@media (min-width: 550px) and (max-width: 750px) {
+  body .owl-theme .owl-controls .owl-buttons .owl-prev {
+    left: 0px;
+  }
+}
+@media (max-width: 550px) {
+  body .owl-theme .owl-controls .owl-buttons .owl-prev {
+    display: none;
+  }
+}
+body .owl-theme .owl-controls .owl-buttons .owl-next {
+  right: 20%;
+  top: 39%;
+  font-size: 30px;
+  border-radius: 45px;
+  height: 45px;
+  background-color: #232C34;
+}
+@media (min-width: 550px) and (max-width: 750px) {
+  body .owl-theme .owl-controls .owl-buttons .owl-next {
+    right: 0px;
+  }
+}
+@media (max-width: 550px) {
+  body .owl-theme .owl-controls .owl-buttons .owl-next {
+    display: none;
+  }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Playlist.com</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/playlist.css">
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="bower_components/owlcar/owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" href="bower_components/owlcar/owl-carousel/owl.theme.css">
+
+  <!--<link rel="icon" type="image/png" href="images/favicon.png" />-->
+
+</head>
+<body>
+  <!-- Hero -->
+  <div class="u-full-width bg-image">
+    <!-- Navbar-->
+    <div class="navbar">
+      <div class="container">
+        <div class="logo-container">
+          <a href="/">
+            <img src="images/playlist-logo.png" alt="playlist logo" class="logo"/>
+          </a>
+        </div>
+          <div class="nav-menu">
+          <ul>
+            <li>
+              <a href="about.html">ABOUT</a>
+            </li>
+            <li>
+              <a href="team.html">TEAM</a>
+            </li>
+            <li>
+              <a href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Callout/Form-->
+    <div class="container hero">
+      <div class="row">
+
+        <div class="three columns">&nbsp;</div>
+
+        <div class="six columns callout">
+          <h4>Want to try Playlist?</h4>
+          <p>Leave your email and we will put you on our VIP invite list</p>
+
+          <form action="">
+            <div class="row">
+              <div class="nine columns signup-input">
+                <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+              </div>
+              <div class="three columns btn-container">
+                <input class="button-primary btn-submit" type="submit" value="Submit">
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="three columns">&nbsp;</div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Middle band-->
+  <div class="u-full-width middle-band">
+    <div class="container">
+      <div class="row">
+        <p>Playlists being listened to now</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Album Carousel-->
+  <div class="album-carousel u-full-width">
+    <ul class="owl-carousel">
+      <li>
+        <img src="images/280px.png" alt=""/>
+        <img src="images/icon_default_play@2x.png" class="play-btn"/>
+        <span class="genre">genre name</span>
+      </li>
+      <li>
+        <img src="images/280px.png" alt=""/>
+        <img src="images/icon_default_play@2x.png" class="play-btn"/>
+        <span class="genre">genre name</span>
+      </li>
+      <li>
+        <img src="images/280px.png" alt=""/>
+        <img src="images/icon_default_play@2x.png" class="play-btn"/>
+        <span class="genre">genre name</span>
+      </li>
+      <li>
+        <img src="images/280px.png" alt=""/>
+
+        <!-- media player example-->
+        <span class="media-player">
+          <div class="progress-container">
+            <span class="bg"></span>
+            <span class="bar"></span>
+          </div>
+          <img src="images/60px.png" class="album-thumb"/>
+          <div class="artist-info">
+            <div class="album">Album Name</div>
+            <div class="artist">Artist</div>
+          </div>
+          <div class="player-controls">
+            <img src="images/icon_player_pause.png" alt="" class="pause"/>
+            <img src="images/icon_player_skip.png" alt="" class="skip"/>
+          </div>
+        </span>
+
+      </li>
+      <li>
+        <img src="images/280px.png" alt=""/>
+        <img src="images/icon_default_play@2x.png" class="play-btn"/>
+        <span class="genre">genre name</span>
+      </li>
+      <li>
+        <img src="images/280px.png" alt=""/>
+        <img src="images/icon_default_play@2x.png" class="play-btn"/>
+        <span class="genre">genre name</span>
+      </li>
+      <li>
+        <img src="images/280px.png" alt=""/>
+        <img src="images/icon_default_play@2x.png" class="play-btn"/>
+        <span class="genre">genre name</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Footer-->
+  <footer class="u-full-width">
+    <div class="container">
+      <div class="copyright u-pull-left">
+        &copy; 2015 PLAYLIST.COM
+      </div>
+      <div class="social u-pull-right">
+        <img src="images/icon-facebook.svg"/>
+        <img src="images/icon-twitter.svg"/>
+      </div>
+    </div>
+  </footer>
+
+<!-- End Document -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="bower_components/owlcar/owl-carousel/owl.carousel.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        pagination: false,
+        navigation: true,
+        center: true,
+        activeClass: "active",
+        animateIn: true,
+        animateOut: true,
+        autoHeight: false,
+        autoWidth: false,
+        navigationText: ["&larr;","&rarr;"]
+      });
+    });
+  </script>
+</body>
+</html>
