@@ -594,7 +594,7 @@ body {
   font-family: 'Varela Round', sans-serif;
 }
 body#home {
-  background: url("../images/pl.jpg") center center fixed no-repeat;
+  background: url("../images/pl3.jpg") center center fixed no-repeat;
   background-size: cover;
 }
 body#home footer {
@@ -708,10 +708,10 @@ body .container.hero:not(.bottom) .callout {
   margin-top: 25%;
 }
 body .container.hero:not(.bottom) .callout h4 {
-  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
 }
 body .container.hero:not(.bottom) .callout p {
-  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
 }
 body .container.hero:not(.bottom) .callout form .signup-input ::-webkit-input-placeholder {
   text-align: center;
