@@ -953,6 +953,9 @@ body .owl-theme .owl-controls .owl-buttons .owl-next {
     display: none;
   }
 }
+button.playlist {
+  margin-top: 20px;
+}
 .media-player {
   position: fixed;
   bottom: 0px;
