@@ -593,27 +593,10 @@ body {
   margin: 0px;
   font-family: 'Varela Round', sans-serif;
 }
-body#home {
-  background: url("../images/pl3.jpg") center center fixed no-repeat;
+body .bg-image {
+  background: url("../images/pl3.jpg") center top no-repeat;
   background-size: cover;
-}
-body#home footer {
-  position: absolute;
-  bottom: 0;
-}
-@media (min-width: 0px) and (max-width: 550px) {
-  body#home footer {
-    position: fixed;
-    bottom: 0;
-  }
-}
-body#home .container.hero:not(.bottom) {
-  margin-bottom: 65px;
-  margin-top: 0px;
-  position: fixed;
-  bottom: 0px;
-  left: 0;
-  right: 0;
+  display: block;
 }
 body .navbar.invert {
   background-color: #303742;
