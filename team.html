@@ -119,6 +119,7 @@
         <h6 class="title">Platform Engineer</h6>
         <br/>
         <p>Music has been a large part of my life, from performing, to composing, to recording, to listening.  I almost always have something playing while I'm coding; music is my coffee.</p>
+        <p><button onclick="window.app.play(1)">Play Jacob's Playlist</button></p>
       </div>
       <div class="one-third column">
         <img src="images/jordan.jpg" class="u-pull-left team-pic" alt=""/>
@@ -182,6 +183,24 @@
       <div class="three columns">&nbsp;</div>
     </div>
   </div>
+
+  <!-- media player example-->
+  <span class="media-player" id="player">
+    <div class="progress-container">
+      <span class="bg"></span>
+      <span class="bar" id="bar" style="width: 0%"></span>
+    </div>
+    <img src="images/60px.png" class="album-thumb" id="track-image"/>
+    <div class="artist-info">
+      <div class="album" id="track-name">Track</div>
+      <div class="artist" id="artist-name">Artist</div>
+    </div>
+    <div class="player-controls">
+      <img src="images/icon_player_pause.png" alt="" class="pause" id="pause" onclick="window.app.pause()"/>
+      <img src="images/play.png" alt="" class="pause" id="play" onclick="window.app.play()"/>
+      <img src="images/icon_player_skip.png" alt="" class="skip" id="skip" onclick="window.app.next()"/>
+    </div>
+  </span>
 
   <!-- Footer-->
   <footer class="u-full-width">

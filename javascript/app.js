@@ -1,10 +1,15 @@
 /* global soundManager */
 
+var $ = require('jquery');
+var request = require('superagent');
+
+$(function() {
+  $('#player').hide();
+});
+
 // /////////////////// //
 // API Request Helper //
 // /////////////////// //
-
-var request = require('superagent');
 
 var API_URL = 'http://localhost:3000';
 
@@ -23,12 +28,13 @@ var App = function() {
   this.currentSound = null;
 
   this.ready = false;
+  this.playing = false;
 };
 
 // Internal API
 
 App.prototype._advance = function() {
-  this.currentTrack = this.tracks.pop();
+  this._setCurrentTrack(this.tracks.pop());
   if (!this.currentTrack) {
     this.stop();
   }
@@ -65,7 +71,24 @@ App.prototype._play = function() {
       autoPlay: true,
       onload: function() {
       },
+      onpause: function() {
+        self._setPlaying(false);
+      },
+      onstop: function() {
+        self._setPlaying(false);
+      },
+      onplay: function() {
+        self._setPlaying(true);
+      },
+      onresume: function() {
+        self._setPlaying(true);
+      },
+      whileplaying: function() {
+        self._setPlaying(true);
+        $('#bar').css('width', Math.floor(this.position / this.duration * 100) + '%');
+      },
       onfinish: function() {
+        self._setPlaying(false);
         self.currentSound.destruct();
         self.currentSound = null;
         self._advance();
@@ -77,6 +100,28 @@ App.prototype._play = function() {
     window.sound = self.currentSound;
   });
 
+};
+
+App.prototype._setCurrentTrack = function(currentTrack) {
+  this.currentTrack = currentTrack;
+  if (currentTrack) {
+    $('#track-image').attr('src', currentTrack.album.album_art);
+    $('#track-name').html(currentTrack.title);
+    $('#artist-name').html((currentTrack.artists[0] || {}).name);
+  }
+};
+
+App.prototype._setPlaying = function(playing) {
+  if (playing !== this.playing) {
+    this.playing = playing;
+    if (playing) {
+      $('#play').hide();
+      $('#pause').show();
+    } else {
+      $('#pause').hide();
+      $('#play').show();
+    }
+  }
 };
 
 // Public API
@@ -91,6 +136,8 @@ App.prototype.setReady = function(ready) {
 
 App.prototype.play = function(playlistId) {
   var self = this;
+
+  $('#player').show();
 
   if ((this.playlistId === playlistId || !playlistId) && this.currentSound) {
     this.currentSound.play();
@@ -126,7 +173,7 @@ App.prototype.stop = function() {
   }
 
   this.currentSound = null;
-  this.currentTrack = null;
+  this._setCurrentTrack(null);
   this.playlistId = null;
   this.tracks = [];
 };

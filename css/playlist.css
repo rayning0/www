@@ -696,10 +696,10 @@ body .container.hero:not(.bottom) .callout {
   margin-top: 25%;
 }
 body .container.hero:not(.bottom) .callout h4 {
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
 }
 body .container.hero:not(.bottom) .callout p {
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
 }
 body .container.hero:not(.bottom) .callout form .signup-input ::-webkit-input-placeholder {
   text-align: center;
@@ -851,72 +851,6 @@ body .album-carousel ul li span.genre {
     display: none;
   }
 }
-body .album-carousel ul li .media-player {
-  position: absolute;
-  bottom: 7px;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background-color: #232A34;
-}
-body .album-carousel ul li .media-player img.album-thumb {
-  float: left;
-  height: 60px;
-  width: 60px;
-  margin: 10px;
-}
-body .album-carousel ul li .media-player .artist-info .album {
-  text-align: left;
-  color: white;
-  font-size: 11px;
-  margin: 18px 5px 10px 10px;
-}
-body .album-carousel ul li .media-player .artist-info .artist {
-  text-align: left;
-  color: whitesmoke;
-  opacity: 0.5;
-  font-size: 12px;
-  margin: 10px;
-}
-body .album-carousel ul li .media-player .player-controls img.pause {
-  position: absolute;
-  top: 30px;
-  right: 45px;
-  height: 15px;
-}
-body .album-carousel ul li .media-player .player-controls img.skip {
-  position: absolute;
-  top: 31px;
-  right: 15px;
-  height: 15px;
-}
-body .album-carousel ul li .media-player .progress-container {
-  position: absolute;
-  top: -3px;
-  height: 3px;
-  width: 100%;
-}
-body .album-carousel ul li .media-player .progress-container .bar {
-  position: absolute;
-  background-color: #ff206f;
-  width: 67%;
-  height: 3px;
-  top: 0;
-  left: 0;
-}
-body .album-carousel ul li .media-player .progress-container .bg {
-  position: absolute;
-  top: 0;
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  opacity: 0.5;
-}
-@media (min-width: 0px) and (max-width: 550px) {
-  body .album-carousel ul li .media-player {
-    display: none;
-  }
-}
 body footer {
   height: 80px;
   background-color: #f5f5f5;
@@ -1016,6 +950,73 @@ body .owl-theme .owl-controls .owl-buttons .owl-next {
 }
 @media (max-width: 550px) {
   body .owl-theme .owl-controls .owl-buttons .owl-next {
+    display: none;
+  }
+}
+.media-player {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 80px;
+  background-color: #232A34;
+  z-index: 1000;
+}
+.media-player img.album-thumb {
+  float: left;
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+}
+.media-player .artist-info .album {
+  text-align: left;
+  color: white;
+  font-size: 11px;
+  margin: 18px 5px 10px 10px;
+}
+.media-player .artist-info .artist {
+  text-align: left;
+  color: whitesmoke;
+  opacity: 0.5;
+  font-size: 12px;
+  margin: 10px;
+}
+.media-player .player-controls img.pause {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  height: 15px;
+}
+.media-player .player-controls img.skip {
+  position: absolute;
+  top: 31px;
+  right: 15px;
+  height: 15px;
+}
+.media-player .progress-container {
+  position: absolute;
+  top: -3px;
+  height: 3px;
+  width: 100%;
+}
+.media-player .progress-container .bar {
+  position: absolute;
+  background-color: #ff206f;
+  height: 3px;
+  top: 0;
+  left: 0;
+}
+.media-player .progress-container .bg {
+  position: absolute;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  opacity: 0.5;
+}
+@media (min-width: 0px) and (max-width: 550px) {
+  .media-player {
     display: none;
   }
 }

@@ -259,74 +259,6 @@ body {
                   display: none;
                }
             }
-            .media-player {
-               position: absolute;
-               bottom: 7px;
-               left: 0;
-               width: 100%;
-               height: 80px;
-               background-color: #232A34;
-               img.album-thumb {
-                  float: left;
-                  height: 60px;
-                  width: 60px;
-                  margin: 10px;
-               }
-               .artist-info {
-                  .album {
-                     text-align: left;
-                     color: white;
-                     font-size: 11px;
-                     margin: 18px 5px 10px 10px
-                  }
-                  .artist {
-                     text-align: left;
-                     color: whitesmoke;
-                     opacity: 0.5;
-                     font-size: 12px;
-                     margin: 10px;
-                  }
-               }
-               .player-controls {
-                  img.pause {
-                     position: absolute;
-                     top: 30px;
-                     right: 45px;
-                     height: 15px;
-                  }
-                  img.skip {
-                     position: absolute;
-                     top: 31px;
-                     right: 15px;
-                     height: 15px;
-                  }
-               }
-               .progress-container {
-                  position: absolute;
-                  top: -3px;
-                  height: 3px;
-                  width: 100%;
-                  .bar {
-                     position: absolute;
-                     background-color: @primary-color;
-                     width: 67%;
-                     height: 3px;
-                     top: 0;
-                     left: 0;
-                  }
-                  .bg {
-                     position: absolute;
-                     top: 0;
-                     height: 3px;
-                     width: 100%;
-                     background-color: white;
-                     opacity: 0.5;
-                  }
-               }
-               @media (min-width:0px) and (max-width: @bp-larger-than-phablet) {
-                  display: none;
-               }
-            }
          }
       }
    }
@@ -444,5 +376,76 @@ body {
       @media (max-width: @bp-larger-than-phablet) {
          display: none;
       }
+   }
+}
+
+.media-player {
+   position: fixed;
+   bottom: 0px;
+   left: 50%;
+   margin-left: -150px;
+   width: 300px;
+   height: 80px;
+   background-color: #232A34;
+   z-index: 1000;
+   img.album-thumb {
+      float: left;
+      height: 60px;
+      width: 60px;
+      margin: 10px;
+   }
+   .artist-info {
+      .album {
+         text-align: left;
+         color: white;
+         font-size: 11px;
+         margin: 18px 5px 10px 10px
+      }
+      .artist {
+         text-align: left;
+         color: whitesmoke;
+         opacity: 0.5;
+         font-size: 12px;
+         margin: 10px;
+      }
+   }
+   .player-controls {
+      img.pause {
+         position: absolute;
+         top: 30px;
+         right: 45px;
+         height: 15px;
+      }
+      img.skip {
+         position: absolute;
+         top: 31px;
+         right: 15px;
+         height: 15px;
+      }
+   }
+   .progress-container {
+      position: absolute;
+      top: -3px;
+      height: 3px;
+      width: 100%;
+      .bar {
+         position: absolute;
+         background-color: @primary-color;
+         //width: 67%;
+         height: 3px;
+         top: 0;
+         left: 0;
+      }
+      .bg {
+         position: absolute;
+         top: 0;
+         height: 3px;
+         width: 100%;
+         background-color: white;
+         opacity: 0.5;
+      }
+   }
+   @media (min-width:0px) and (max-width: @bp-larger-than-phablet) {
+      display: none;
    }
 }
