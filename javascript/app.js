@@ -11,7 +11,7 @@ $(function() {
 // API Request Helper //
 // /////////////////// //
 
-var API_URL = 'http://localhost:3000';
+var API_URL = 'https://api.playlist.com';
 
 var API = function(method, endpoint) {
   return request[method](API_URL + endpoint);
