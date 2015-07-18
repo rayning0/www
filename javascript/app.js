@@ -84,7 +84,7 @@ App.prototype._play = function() {
         self._setPlaying(true);
       },
       whileplaying: function() {
-        self._setPlaying(true);
+        // self._setPlaying(true);
         $('#bar').css('width', Math.floor(this.position / this.duration * 100) + '%');
       },
       onfinish: function() {
