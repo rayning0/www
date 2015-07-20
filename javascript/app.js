@@ -140,7 +140,9 @@ App.prototype.play = function(playlistId) {
   $('#player').show();
 
   if ((this.playlistId === playlistId || !playlistId) && this.currentSound) {
-    this.currentSound.play();
+    if (!this.playing) {
+      this.currentSound.play();
+    }
     return;
   }
 
