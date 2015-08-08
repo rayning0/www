@@ -282,7 +282,7 @@ input[type="button"] {
   display: inline-block;
   height: 42px;
   padding: 0 30px;
-  color: #555555;
+  color: #fff;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -291,7 +291,7 @@ input[type="button"] {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: transparent;
+  background-color: #428bca;
   border-radius: 42px;
   border: 1px solid #bbbbbb;
   cursor: pointer;
@@ -306,7 +306,7 @@ button:hover {
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-  color: #333333;
+  color: #000;
   border-color: #888888;
   outline: 0;
 }
@@ -369,6 +369,7 @@ input[type="text"],
 input[type="tel"],
 input[type="url"],
 input[type="password"] {
+  color: blue;
   height: 42px;
   font-size: 16px;
   line-height: 20px;

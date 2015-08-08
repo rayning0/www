@@ -33,31 +33,48 @@
 <!-- CSS adjustments for browsers with JavaScript disabled -->
 <noscript><link rel="stylesheet" href="css/jquery.fileupload-noscript.css"></noscript>
 <noscript><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"></noscript>
+
+<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../css/skeleton.css">
+<link rel="stylesheet" href="../css/playlist.css">
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<link rel="icon" type="image/png" href="../images/favicon.png" />
 </head>
-<body>
-<div class="navbar navbar-default navbar-fixed-top">
+<body style="padding-top: 0px;">
+
+  <div class="navbar invert">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-fixed-top .navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../index.html">Home</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../team.html">Team</a></li>
-                <li><a href="mailto:contact@playlist.com">Contact</a></li>
-                <li><a href="https://blueimp.net">Upload code &copy; Sebastian Tschan</a></li>
-            </ul>
-        </div>
+      <div class="logo-container">
+        <a href="../index.html">
+          <img src="../images/playlist-logo.png" alt="playlist logo" class="logo"/>
+        </a>
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <form action="http://localhost:3000/" method="POST">
+            <li>
+              <a href="../about.html">ABOUT</a>
+            </li>
+            <li>
+              <a href="../team.html">TEAM</a>
+            </li>
+            <li>
+              <a href="mailto:contact@playlist.com">CONTACT</a>
+            </li>
+            <li class="active">
+              <a href="upload.html">UPLOAD</a>
+            </li>
+            <input type="text" name="login" placeholder="Login">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" name="commit" value="Login">
+          </form>
+        </ul>
+      </div>
     </div>
-</div>
+  </div>
+
 <div class="container">
     <h1>Upload Image Files to S3</h1>
-    <h2 class="lead">Basic Plus UI version</h2>
     <ul class="nav nav-tabs">
         <li class="active"><a href="index.html">Basic Plus UI</a></li>
     </ul>
@@ -73,20 +90,20 @@
         <noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript>
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
         <div class="row fileupload-buttonbar">
-            <div class="col-lg-7">
+            <div class="col-lg-8">
                 <!-- The fileinput-button span is used to style the file input field as button -->
-                <span class="btn btn-success fileinput-button">
+                <button type="button" class="btn btn-success fileinput-button">
                     <i class="glyphicon glyphicon-plus"></i>
-                    <span>Add files...</span>
+                    <span>Add Files...</span>
                     <input type="file" name="file" multiple>
-                </span>
+                </button>
                 <button type="submit" class="btn btn-primary start">
                     <i class="glyphicon glyphicon-upload"></i>
-                    <span>Start upload</span>
+                    <span>Start Upload</span>
                 </button>
                 <button type="reset" class="btn btn-warning cancel">
                     <i class="glyphicon glyphicon-ban-circle"></i>
-                    <span>Cancel upload</span>
+                    <span>Cancel Upload</span>
                 </button>
                 <button type="button" class="btn btn-danger delete">
                     <i class="glyphicon glyphicon-trash"></i>
@@ -116,8 +133,8 @@
         </div>
         <div class="panel-body">
             <ul>
-                <li>Only image files (<strong>JPG, GIF, PNG</strong>) are allowed.</li>
-                <li>You can <strong>drag &amp; drop</strong> files from your desktop on this webpage (see <a href="https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support">Browser support</a>).</li>
+                <li>Only image files (JPG, GIF, PNG) are allowed.</li>
+                <li>You can drag and drop files from your desktop on this webpage (see <a href="https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support">Browser support</a>).</li>
                 <li>Please refer to the <a href="https://github.com/blueimp/jQuery-File-Upload">project website</a> and <a href="https://github.com/blueimp/jQuery-File-Upload/wiki">documentation</a> for more information.</li>
             </ul>
         </div>
