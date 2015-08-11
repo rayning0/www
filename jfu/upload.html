@@ -51,23 +51,18 @@
       </div>
       <div class="nav-menu">
         <ul>
-          <form action="http://localhost:3000/" method="POST">
-            <li>
-              <a href="../about.html">ABOUT</a>
-            </li>
-            <li>
-              <a href="../team.html">TEAM</a>
-            </li>
-            <li>
-              <a href="mailto:contact@playlist.com">CONTACT</a>
-            </li>
-            <li class="active">
-              <a href="upload.html">UPLOAD</a>
-            </li>
-            <input type="text" name="login" placeholder="Login">
-            <input type="password" name="password" placeholder="Password">
-            <input type="submit" name="commit" value="Login">
-          </form>
+          <li>
+            <a href="../about.html">ABOUT</a>
+          </li>
+          <li>
+            <a href="../team.html">TEAM</a>
+          </li>
+          <li>
+            <a href="mailto:contact@playlist.com">CONTACT</a>
+          </li>
+          <li class="active">
+            <a href="upload.html">UPLOAD</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -80,7 +75,7 @@
     </ul>
     <br>
     <blockquote>
-        <p>- File Upload widget with multiple file selection, drag and drop support, progress bars, validation and preview images, audio and video for jQuery.<br>
+        <p>- File upload widget with multiple file selection, drag and drop support, progress bars, validation and preview images, audio and video for jQuery.<br>
         - Supports cross-domain, chunked and resumable file uploads and client-side image resizing.</p>
     </blockquote>
     <br>
@@ -91,6 +86,11 @@
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
         <div class="row fileupload-buttonbar">
             <div class="col-lg-8">
+              <input type="text" name="login" placeholder="Login">
+              <input type="password" name="password" placeholder="Password">
+              <input id="log_in" type="submit" name="commit" value="Login">
+
+              <span id="buttons">
                 <!-- The fileinput-button span is used to style the file input field as button -->
                 <button type="button" class="btn btn-success fileinput-button">
                     <i class="glyphicon glyphicon-plus"></i>
@@ -110,17 +110,19 @@
                     <span>Delete</span>
                 </button>
                 <input type="checkbox" class="toggle">
-                <!-- The global file processing state -->
-                <span class="fileupload-process"></span>
+              </span>
+
+              <!-- The global file processing state -->
+              <span class="fileupload-process"></span>
             </div>
             <!-- The global progress state -->
             <div class="col-lg-5 fileupload-progress fade">
-                <!-- The global progress bar -->
-                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
-                </div>
-                <!-- The extended global progress state -->
-                <div class="progress-extended">&nbsp;</div>
+              <!-- The global progress bar -->
+              <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+              </div>
+              <!-- The extended global progress state -->
+              <div class="progress-extended">&nbsp;</div>
             </div>
         </div>
         <!-- The table listing the files available for upload/download -->
@@ -132,11 +134,11 @@
             <h3 class="panel-title">Notes</h3>
         </div>
         <div class="panel-body">
-            <ul>
-                <li>Only image files (JPG, GIF, PNG) are allowed.</li>
-                <li>You can drag and drop files from your desktop on this webpage (see <a href="https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support">Browser support</a>).</li>
-                <li>Please refer to the <a href="https://github.com/blueimp/jQuery-File-Upload">project website</a> and <a href="https://github.com/blueimp/jQuery-File-Upload/wiki">documentation</a> for more information.</li>
-            </ul>
+          <ul>
+            <li>Only image files (JPG, GIF, PNG) are allowed.</li>
+            <li>You can drag and drop files from your desktop on this webpage (see <a href="https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support">Browser support</a>).</li>
+            <li>Please refer to the <a href="https://github.com/blueimp/jQuery-File-Upload">project website</a> and <a href="https://github.com/blueimp/jQuery-File-Upload/wiki">documentation</a> for more information.</li>
+          </ul>
         </div>
     </div>
 </div>
